@@ -150,6 +150,11 @@ body {
     margin: 0.5rem 0 0;
 }
 
+.precio {
+    font-weight: bold;
+    color: var(--texto);
+}
+
 .main-content {
     max-width: 1200px;
     margin: 2rem auto;
@@ -157,6 +162,11 @@ body {
 }
 
 .productos-seccion {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.regresar-seccion {
     text-align: center;
     margin-bottom: 3rem;
 }
