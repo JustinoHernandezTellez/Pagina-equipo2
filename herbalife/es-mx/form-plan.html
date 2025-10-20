@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Plan Alimenticio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Generador de Plan Alimenticio</h1>
+    </header>
+
+    <main class="main-content">
+        <section class="formulario-container">
+            <h2>Crea tu plan personalizado</h2>
+            
+            <form id="plan-form">
+                <div class="form-group">
+                    <label for="tipo-plan">Selecciona una opción:</label>
+                    <select id="tipo-plan" name="tipo-plan">
+                        <option value="snacks-comidas">Snacks, comidas, licuados y jugos</option>
+                        <option value="macronutrientes">Macronutrientes por día</option>
+                    </select>
+                </div>
+
+                <!-- Variantes del formulario -->
+                <div id="variante-snacks" class="variante">
+                    <h3>Selecciona tus opciones</h3>
+                    <div class="form-group">
+                        <h4>Snacks</h4>
+                        <input type="checkbox" id="snack1" name="snack" value="Fruta">
+                        <label for="snack1">Fruta</label><br>
+                        <input type="checkbox" id="snack2" name="snack" value="Yogur griego">
+                        <label for="snack2">Yogur griego</label><br>
+                        <input type="checkbox" id="snack3" name="snack" value="Puñado de nueces">
+                        <label for="snack3">Puñado de nueces</label><br>
+                    </div>
+                    <div class="form-group">
+                        <h4>Comidas saludables</h4>
+                        <input type="checkbox" id="comida1" name="comida" value="Pollo a la plancha con verduras">
+                        <label for="comida1">Pollo a la plancha con verduras</label><br>
+                        <input type="checkbox" id="comida2" name="comida" value="Ensalada de salmón">
+                        <label for="comida2">Ensalada de salmón</label><br>
+                        <input type="checkbox" id="comida3" name="comida" value="Pasta integral con atún">
+                        <label for="comida3">Pasta integral con atún</label><br>
+                    </div>
+                    <div class="form-group">
+                        <h4>Licuados y jugos</h4>
+                        <input type="checkbox" id="jugo1" name="jugo" value="Jugo verde (espinaca, pepino, manzana)">
+                        <label for="jugo1">Jugo verde (espinaca, pepino, manzana)</label><br>
+                        <input type="checkbox" id="jugo2" name="jugo" value="Licuado de plátano y avena">
+                        <label for="jugo2">Licuado de plátano y avena</label><br>
+                    </div>
+                </div>
+
+                <div id="variante-macronutrientes" class="variante" style="display:none;">
+                    <h3>Define tus macronutrientes</h3>
+                    <div class="form-group">
+                        <label for="proteinas">Proteínas (gramos):</label>
+                        <input type="number" id="proteinas" name="proteinas" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="carbohidratos">Carbohidratos (gramos):</label>
+                        <input type="number" id="carbohidratos" name="carbohidratos" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="grasas">Grasas (gramos):</label>
+                        <input type="number" id="grasas" name="grasas" min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Generar Plan</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Nuevo div para mostrar el resultado -->
+    <div class="main-content" id="resultado-plan">
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Generador de Planes Alimenticios</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
